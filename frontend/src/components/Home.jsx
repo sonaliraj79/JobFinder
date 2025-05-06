@@ -7,6 +7,7 @@ import Footer from "./shared/Footer";
 import useGetAllJobs from "@/hooks/useGetAllJobs";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Chatbox from "./chat/Chatbox.jsx";
 
 const Home = () => {
   useGetAllJobs();
@@ -24,7 +25,11 @@ const Home = () => {
       <CategoryCarousel />
       <LatestJobs />
       <Footer />
+      <Chatbox />
     </div>
+    //   <div>
+    //     <Chatbox />
+    //   </div>
   );
 };
 
