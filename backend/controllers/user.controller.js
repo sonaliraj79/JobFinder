@@ -6,6 +6,8 @@ import cloudinary from "../utils/cloudinary.js";
 
 export const register = async (req, res) => {
   try {
+    console.log("Form Fields:", req.body);
+    console.log("Uploaded File:", req.file);
     const { fullname, email, phoneNumber, password, role } = req.body;
 
     if (!fullname || !email || !phoneNumber || !password || !role) {

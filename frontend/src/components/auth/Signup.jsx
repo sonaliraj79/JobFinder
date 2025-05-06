@@ -41,6 +41,7 @@ const Signup = () => {
     formData.append("role", input.role);
     if (input.file) {
       formData.append("file", input.file);
+      console.log("Uploaded File:", input.file);
     }
 
     try {
@@ -60,6 +61,11 @@ const Signup = () => {
       dispatch(setLoading(false));
     }
   };
+
+  // const submitHandler = async (e) => {
+  //   e.preventDefault();
+  //   console.log(input);
+  // };
 
   useEffect(() => {
     if (user) {
@@ -82,7 +88,7 @@ const Signup = () => {
               value={input.fullname}
               name="fullname"
               onChange={changeEventHandler}
-              placeholder="patel"
+              placeholder="name"
             />
           </div>
           <div className="my-2">
@@ -92,7 +98,7 @@ const Signup = () => {
               value={input.email}
               name="email"
               onChange={changeEventHandler}
-              placeholder="patel@gmail.com"
+              placeholder="example@gmail.com"
             />
           </div>
           <div className="my-2">
@@ -112,7 +118,7 @@ const Signup = () => {
               value={input.password}
               name="password"
               onChange={changeEventHandler}
-              placeholder="patel@gmail.com"
+              placeholder="password"
             />
           </div>
           <div className="flex items-center justify-between">
